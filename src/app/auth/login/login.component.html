@@ -1,0 +1,9 @@
+<form [formGroup]="formLogin" (submit)="login()">
+  <input type="text" name="email" placeholder="email" formControlName="email">
+  <input type="password" name="password" placeholder="password" formControlName="password">
+  <button type="submit">Login</button>
+</form>
+
+
+  <span>Response: {{ auth$ | async | json }}</span>
+  <span>Error: {{ err$ | async | json }}</span>
